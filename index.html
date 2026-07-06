@@ -3,157 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>First Class Chauffeur | New York Luxury Chauffeur Service</title>
+  <title>First Class Chauffeur | Luxury Chauffeur Service in New York</title>
+  <meta name="description" content="First Class Chauffeur offers luxury chauffeur service in New York. $150/hr, 2-hour minimum. Airport transfers, hourly charters, events, weddings, executive travel." />
   <style>
-    :root{--black:#050505;--charcoal:#101010;--gold:#d4af37;--muted:#b8b8b8;--white:#fff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#050505;color:white;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;background:rgba(0,0,0,.92);border-bottom:1px solid rgba(212,175,55,.3);z-index:10}
-    nav{max-width:1150px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .logo{font-weight:900;letter-spacing:1px;font-size:20px} .logo span{color:var(--gold)}
-    .call{background:var(--gold);color:#111;padding:10px 15px;border-radius:999px;font-weight:900}
-    .hero{padding:80px 22px;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.55)),radial-gradient(circle at 75% 20%,rgba(212,175,55,.25),transparent 30%),linear-gradient(135deg,#050505,#1b1b1b)}
-    .wrap{max-width:1150px;margin:auto}
-    h1{font-size:clamp(42px,8vw,78px);line-height:1;margin:10px 0}
-    h2{font-size:36px;margin:0 0 12px}
-    .gold{color:var(--gold)} .lead{font-size:19px;color:#e8e8e8;max-width:780px}
-    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    .btn{padding:14px 19px;border-radius:10px;font-weight:900;border:1px solid var(--gold)}
-    .btn.primary{background:var(--gold);color:#111}
-    section{padding:68px 22px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .card{background:#101010;border:1px solid rgba(212,175,55,.22);border-radius:18px;padding:24px}
-    .card h3{color:var(--gold);margin:8px 0} .icon{font-size:36px}
-    .fleet{grid-template-columns:repeat(5,1fr)} .fleet .card{text-align:center}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-    form{display:grid;gap:12px}
-    input,select,textarea{width:100%;padding:14px;border-radius:10px;border:1px solid #333;background:#080808;color:white;font-size:16px}
-    textarea{min-height:110px}
-    button{padding:15px;border:0;border-radius:10px;background:var(--gold);color:#111;font-weight:900;font-size:16px}
-    .pill{display:inline-block;margin:6px 6px 0 0;border:1px solid rgba(212,175,55,.45);color:var(--gold);padding:9px 13px;border-radius:999px;font-weight:800}
-    footer{padding:32px 22px;border-top:1px solid rgba(212,175,55,.25);background:#030303;color:#ccc}
-    .fixed{position:fixed;right:16px;bottom:16px;background:var(--gold);color:#111;padding:14px 18px;border-radius:999px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.45)}
-    @media(max-width:850px){.grid,.split{grid-template-columns:1fr}.fleet{grid-template-columns:1fr 1fr}nav{align-items:flex-start;flex-direction:column}}
+    :root {
+      --black:#030303; --dark:#0b0b0b; --card:#111; --gold:#d4af37; --gold2:#f6d76b; --white:#fff; --muted:#b9b9b9;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--black); color:var(--white); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    header { position:sticky; top:0; z-index:99; background:rgba(3,3,3,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(212,175,55,.25); }
+    nav { max-width:1180px; margin:auto; padding:16px 22px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .logo { font-weight:900; letter-spacing:1.3px; font-size:21px; }
+    .logo span,.gold { color:var(--gold); }
+    .navlinks { display:flex; gap:18px; font-size:14px; color:#ddd; }
+    .call { background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#111; padding:10px 16px; border-radius:999px; font-weight:900; white-space:nowrap; }
+    .hero { min-height:88vh; display:grid; place-items:center; padding:90px 22px; background:
+      linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.56)),
+      radial-gradient(circle at 78% 22%,rgba(212,175,55,.26),transparent 27%),
+      linear-gradient(135deg,#020202,#191919); }
+    .wrap { max-width:1180px; margin:auto; }
+    .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center; }
+    .badge { color:var(--gold); font-weight:900; letter-spacing:2px; text-transform:uppercase; font-size:13px; }
+    h1 { font-size:clamp(44px,8vw,84px); line-height:.95; margin:13px 0; }
+    h2 { font-size:clamp(30px,5vw,42px); line-height:1.1; margin:0 0 12px; }
+    h3 { margin:8px 0; }
+    .lead { font-size:19px; color:#e7e7e7; max-width:800px; }
+    .btns { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .btn { display:inline-block; padding:14px 20px; border-radius:12px; font-weight:900; border:1px solid rgba(212,175,55,.75); }
+    .btn.primary { background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#111; }
+    .btn.secondary { color:var(--gold); }
+    .showcase { border:1px solid rgba(212,175,55,.35); border-radius:28px; padding:24px; background:linear-gradient(160deg,#181818,#050505); box-shadow:0 30px 85px rgba(0,0,0,.55); }
+    .car-visual { min-height:245px; border-radius:22px; display:grid; place-items:center; background:
+      radial-gradient(circle at 50% 30%,rgba(246,215,107,.22),transparent 28%),
+      linear-gradient(135deg,#111,#2a2a2a 45%,#070707); border:1px solid rgba(255,255,255,.08); font-size:88px; }
+    .quick { margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .quick div { background:#090909; border:1px solid rgba(255,255,255,.09); border-radius:14px; padding:14px; }
+    .quick strong { color:var(--gold); display:block; }
+    section { padding:76px 22px; }
+    .section-dark { background:#080808; }
+    .sub { color:var(--muted); max-width:820px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+    .card { background:var(--card); border:1px solid rgba(212,175,55,.20); border-radius:20px; padding:24px; box-shadow:0 18px 45px rgba(0,0,0,.25); }
+    .card h3 { color:var(--gold); }
+    .icon { font-size:38px; }
+    .pricing { grid-template-columns:repeat(3,1fr); }
+    .price { font-size:42px; font-weight:900; color:var(--gold); margin:8px 0; }
+    .small { color:#bbb; font-size:14px; }
+    .fleet { grid-template-columns:repeat(3,1fr); }
+    .vehicle-img { height:155px; border-radius:16px; margin-bottom:14px; display:grid; place-items:center; font-size:58px; background:linear-gradient(135deg,#1f1f1f,#080808); border:1px solid rgba(255,255,255,.08); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
+    form { display:grid; gap:12px; }
+    input,select,textarea { width:100%; padding:14px; border-radius:12px; border:1px solid #333; background:#080808; color:#fff; font-size:16px; }
+    textarea { min-height:110px; }
+    button { padding:15px; border:0; border-radius:12px; background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#111; font-weight:900; font-size:16px; cursor:pointer; }
+    .pill { display:inline-block; margin:6px 6px 0 0; border:1px solid rgba(212,175,55,.45); color:var(--gold); padding:9px 13px; border-radius:999px; font-weight:800; background:#080808; }
+    .reviews { grid-template-columns:repeat(3,1fr); }
+    .stars { color:var(--gold); letter-spacing:2px; }
+    .calculator { margin-top:18px; background:#080808; border:1px solid rgba(212,175,55,.22); border-radius:18px; padding:18px; }
+    .calc-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+    .calc-total { font-size:34px; color:var(--gold); font-weight:900; margin-top:12px; }
+    details { background:#101010; border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:16px; margin:10px 0; }
+    summary { cursor:pointer; font-weight:900; color:var(--gold); }
+    footer { border-top:1px solid rgba(212,175,55,.25); background:#030303; color:#ccc; padding:34px 22px; }
+    .footer-grid { max-width:1180px; margin:auto; display:grid; grid-template-columns:2fr 1fr 1fr; gap:20px; }
+    .fixed { position:fixed; right:16px; bottom:16px; background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#111; padding:14px 18px; border-radius:999px; font-weight:900; box-shadow:0 12px 30px rgba(0,0,0,.45); z-index:20; }
+    @media(max-width:900px) {
+      .navlinks { display:none; }
+      .hero-grid,.split,.footer-grid { grid-template-columns:1fr; }
+      .grid,.pricing,.fleet,.reviews { grid-template-columns:1fr; }
+      .quick,.calc-row { grid-template-columns:1fr; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">FIRST CLASS <span>CHAUFFEUR</span></div>
-      <a class="call" href="tel:6465138667">Call 646-513-8667</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <p class="gold"><strong>NEW YORK LUXURY CHAUFFEUR SERVICE</strong></p>
-        <h1>Arrive First Class, Every Time.</h1>
-        <p class="lead">Professional chauffeur service for airport transfers, hourly charters, corporate travel, weddings, proms, nightlife, and special events across New York, New Jersey, Connecticut, and Philadelphia.</p>
-        <div class="btns">
-          <a class="btn primary" href="#booking">Book Now</a>
-          <a class="btn" href="mailto:firstclasschauffeur23@gmail.com">Email Us</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Our Services</h2>
-        <p class="lead">Private luxury transportation with professional drivers, clean vehicles, and smooth communication.</p>
-        <div class="grid">
-          <div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>JFK, LaGuardia, Newark, Teterboro, and private airport pickups.</p></div>
-          <div class="card"><div class="icon">⏱️</div><h3>Hourly Chauffeur</h3><p>Book by the hour for business, shopping, events, or custom trips.</p></div>
-          <div class="card"><div class="icon">💼</div><h3>Corporate Travel</h3><p>Executive transportation for VIP clients and business meetings.</p></div>
-          <div class="card"><div class="icon">💍</div><h3>Weddings & Proms</h3><p>Luxury arrivals for unforgettable occasions.</p></div>
-          <div class="card"><div class="icon">🌃</div><h3>Nightlife</h3><p>Enjoy the city while your chauffeur handles the driving.</p></div>
-          <div class="card"><div class="icon">🛡️</div><h3>Private Driver</h3><p>Discreet, reliable, door-to-door chauffeur service.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section style="background:#080808">
-      <div class="wrap">
-        <h2>Luxury Fleet</h2>
-        <div class="grid fleet">
-          <div class="card"><div class="icon">🏆</div><h3>Maybach</h3></div>
-          <div class="card"><div class="icon">👑</div><h3>Rolls-Royce</h3></div>
-          <div class="card"><div class="icon">🚙</div><h3>Escalade</h3></div>
-          <div class="card"><div class="icon">⭐</div><h3>S-Class</h3></div>
-          <div class="card"><div class="icon">🚐</div><h3>Sprinter</h3></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="booking">
-      <div class="wrap split">
-        <div>
-          <h2>Booking Request</h2>
-          <p class="lead">Fill out the form and your request will be sent directly to <strong>firstclasschauffeur23@gmail.com</strong>.</p>
-          <div>
-            <span class="pill">Apple Pay</span>
-            <span class="pill">PayPal</span>
-            <span class="pill">Cash App</span>
-            <span class="pill">Zelle</span>
-          </div>
-          <p style="color:#bbb;margin-top:16px">Payment details are provided after your quote is confirmed.</p>
-        </div>
-
-        <div class="card">
-          <form action="https://formspree.io/f/xpqgbbez" method="POST">
-            <input type="hidden" name="_subject" value="New First Class Chauffeur Booking Request">
-            <input type="hidden" name="_captcha" value="false">
-
-            <input name="customer_name" placeholder="Full Name" required>
-            <input type="tel" name="phone_number" placeholder="Phone Number" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input name="pickup_address" placeholder="Pickup Address" required>
-            <input name="dropoff_address" placeholder="Drop-off Address" required>
-
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <input type="date" name="pickup_date" required>
-              <input type="time" name="pickup_time" required>
-            </div>
-
-            <select name="vehicle_requested" required>
-              <option value="">Vehicle Requested</option>
-              <option>Luxury SUV</option>
-              <option>Maybach</option>
-              <option>Rolls-Royce</option>
-              <option>Escalade</option>
-              <option>Mercedes S-Class</option>
-              <option>Sprinter Van</option>
-            </select>
-
-            <input name="passengers" placeholder="Number of Passengers">
-            <input name="flight_info" placeholder="Flight Info, if airport pickup">
-            <textarea name="special_requests" placeholder="Special Requests / Notes"></textarea>
-
-            <button type="submit">Send Booking Request</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section style="background:#080808">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p class="lead">Call, email, or submit the booking form for a fast quote.</p>
-        <p><strong>Phone:</strong> <a class="gold" href="tel:6465138667">646-513-8667</a></p>
-        <p><strong>Email:</strong> <a class="gold" href="mailto:firstclasschauffeur23@gmail.com">firstclasschauffeur23@gmail.com</a></p>
-        <p><strong>Location:</strong> New York</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <strong>FIRST CLASS CHAUFFEUR</strong>
-      <p>Luxury chauffeur service based in New York.</p>
+<header>
+  <nav>
+    <a class="logo" href="#home">FIRST CLASS <span>CHAUFFEUR</span></a>
+    <div class="navlinks">
+      <a href="#pricing">Pricing</a><a href="#fleet">Fleet</a><a href="#booking">Book</a><a href="#pay">Pay</a><a href="#contact">Contact</a>
     </div>
-  </footer>
+    <a class="call" href="tel:6465138667">Call 646-513-8667</a>
+  </nav>
+</header>
 
-  <a class="fixed" href="tel:6465138667">Call Now</a>
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge">New York Luxury Chauffeur Service</div>
+        <h1>Luxury Rides. First Class Service.</h1>
+        <p class="lead">Professional chauffeur service for airport transfers, hourly charters, executive travel, weddings, proms, nightlife, and private events across NY, NJ, CT, and Philadelphia.</p>
+        <div class="btns">
+          <a class="btn primary" href="#booking">Request Booking</a>
+          <a class="btn secondary" href="#pricing">View Pricing</a>
+          <a class="btn primary" href="https://buy.stripe.com/7sYaEXgN8gABaaL7d2grS02" target="_blank" rel="noopener">Pay Now with Stripe</a>
+          <a class="btn secondary" href="mailto:firstclasschauffeur23@gmail.com">Email Us</a>
+        </div>
+      </div>
+      <div class="showcase">
+        <div class="car-visual">🚘</div>
+        <div class="quick">
+          <div><strong>Rate</strong>$150/hour</div>
+          <div><strong>Minimum</strong>2 hours</div>
+          <div><strong>Service Fees</strong>Included</div>
+          <div><strong>Payments</strong>Stripe, Apple Pay, PayPal, Cash App, Zelle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section-dark">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="sub">All vehicle services are billed at <strong>$150 per hour</strong> with a <strong>2-hour minimum</strong>. Standard service fees are included.</p>
+      <div class="grid pricing">
+        <div class="card">
+          <h3>Hourly Service</h3>
+          <div class="price">$150/hr</div>
+          <p>Professional chauffeur service for local travel, errands, meetings, nightlife, and custom routes.</p>
+        </div>
+        <div class="card">
+          <h3>Minimum Reservation</h3>
+          <div class="price">$300</div>
+          <p>2-hour minimum for all vehicles and services.</p>
+          <p class="small">Final quote may vary by route, tolls, parking, wait time, vehicle availability, or special requests.</p>
+        </div>
+        <div class="card">
+          <h3>Secure Payment</h3>
+          <p><span class="pill">Stripe</span><span class="pill">Apple Pay</span><span class="pill">PayPal</span><span class="pill">Cash App</span><span class="pill">Zelle</span></p>
+          <p class="small">Secure payment link provided after booking confirmation.</p>
+        </div>
+      </div>
+
+      <div class="calculator">
+        <h3>Quick Quote Calculator</h3>
+        <p class="small">Estimate only. Final quote is confirmed by First Class Chauffeur.</p>
+        <div class="calc-row">
+          <select id="hours" onchange="calcTotal()">
+            <option value="2">2 hours — minimum</option>
+            <option value="3">3 hours</option>
+            <option value="4">4 hours</option>
+            <option value="5">5 hours</option>
+            <option value="6">6 hours</option>
+            <option value="8">8 hours</option>
+          </select>
+          <input value="$150/hour" readonly />
+        </div>
+        <div class="calc-total" id="total">$300</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Services</h2>
+      <p class="sub">Private luxury transportation with professional drivers, clean vehicles, and reliable communication.</p>
+      <div class="grid">
+        <div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>JFK, LaGuardia, Newark, Teterboro, and private airport pickups.</p></div>
+        <div class="card"><div class="icon">⏱️</div><h3>Hourly Chauffeur</h3><p>$150/hour with a 2-hour minimum. Service fees included.</p></div>
+        <div class="card"><div class="icon">💼</div><h3>Corporate Travel</h3><p>Executive transportation for business clients and VIP guests.</p></div>
+        <div class="card"><div class="icon">💍</div><h3>Weddings & Proms</h3><p>Elegant transportation for unforgettable occasions.</p></div>
+        <div class="card"><div class="icon">🌃</div><h3>Nightlife</h3><p>Enjoy the city while your chauffeur handles the driving.</p></div>
+        <div class="card"><div class="icon">🛡️</div><h3>Private Driver</h3><p>Discreet, reliable, door-to-door chauffeur service.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="section-dark">
+    <div class="wrap">
+      <h2>Luxury Fleet</h2>
+      <p class="sub">Vehicle service starts at <strong>$150/hr</strong> with a <strong>2-hour minimum</strong>. Service fees included.</p>
+      <div class="grid fleet">
+        <div class="card"><div class="vehicle-img">🏆</div><h3>Maybach</h3><p>$150/hr • 2-hour minimum</p></div>
+        <div class="card"><div class="vehicle-img">👑</div><h3>Rolls-Royce</h3><p>$150/hr • 2-hour minimum</p></div>
+        <div class="card"><div class="vehicle-img">🚙</div><h3>Escalade</h3><p>$150/hr • 2-hour minimum</p></div>
+        <div class="card"><div class="vehicle-img">⭐</div><h3>Mercedes S-Class</h3><p>$150/hr • 2-hour minimum</p></div>
+        <div class="card"><div class="vehicle-img">🚐</div><h3>Sprinter Van</h3><p>$150/hr • 2-hour minimum</p></div>
+        <div class="card"><div class="vehicle-img">🖤</div><h3>Luxury SUV</h3><p>$150/hr • 2-hour minimum</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="wrap split">
+      <div>
+        <h2>Booking Request</h2>
+        <p class="lead">Fill out the form and your request will be sent directly to <strong>firstclasschauffeur23@gmail.com</strong>.</p>
+        <p><strong>Rate:</strong> $150 per hour, 2-hour minimum. Service fees included.</p>
+        <p><span class="pill">Stripe</span><span class="pill">Apple Pay</span><span class="pill">PayPal</span><span class="pill">Cash App</span><span class="pill">Zelle</span></p>
+      </div>
+
+      <div class="card">
+        <form action="https://formspree.io/f/xpqgbbez" method="POST">
+          <input type="hidden" name="_subject" value="New First Class Chauffeur Booking Request">
+          <input type="hidden" name="_captcha" value="false">
+          <input name="customer_name" placeholder="Full Name" required>
+          <input type="tel" name="phone_number" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input name="pickup_address" placeholder="Pickup Address" required>
+          <input name="dropoff_address" placeholder="Drop-off Address" required>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <input type="date" name="pickup_date" required>
+            <input type="time" name="pickup_time" required>
+          </div>
+          <select name="vehicle_requested" required>
+            <option value="">Vehicle Requested</option>
+            <option>Luxury SUV - $150/hr, 2-hour minimum</option>
+            <option>Maybach - $150/hr, 2-hour minimum</option>
+            <option>Rolls-Royce - $150/hr, 2-hour minimum</option>
+            <option>Escalade - $150/hr, 2-hour minimum</option>
+            <option>Mercedes S-Class - $150/hr, 2-hour minimum</option>
+            <option>Sprinter Van - $150/hr, 2-hour minimum</option>
+          </select>
+          <input name="hours_requested" placeholder="Hours Requested (2-hour minimum)">
+          <input name="passengers" placeholder="Number of Passengers">
+          <input name="flight_info" placeholder="Flight Info, if airport pickup">
+          <textarea name="special_requests" placeholder="Special Requests / Notes"></textarea>
+          <button type="submit">Send Booking Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="pay" class="section-dark">
+    <div class="wrap split">
+      <div>
+        <h2>Secure Payments</h2>
+        <p class="lead">After your reservation is confirmed, we send a secure payment link for credit/debit card payment through Stripe.</p>
+        <p><span class="pill">Visa</span><span class="pill">Mastercard</span><span class="pill">Amex</span><span class="pill">Discover</span><span class="pill">Apple Pay</span><span class="pill">Google Pay</span></p>
+      </div>
+      <div class="card">
+        <h3>Payment Options</h3>
+        <p>Stripe secure checkout, Apple Pay, PayPal, Cash App, and Zelle.</p>
+        <a class="btn primary" href="https://buy.stripe.com/7sYaEXgN8gABaaL7d2grS02">Pay Now with Stripe</a>
+        <p class="small">Secure Stripe checkout for reservations and payments.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Client Reviews</h2>
+      <div class="grid reviews">
+        <div class="card"><div class="stars">★★★★★</div><p>Professional, clean, and on time. The ride felt first class.</p><strong>— Executive Client</strong></div>
+        <div class="card"><div class="stars">★★★★★</div><p>Airport pickup was smooth and communication was great.</p><strong>— JFK Passenger</strong></div>
+        <div class="card"><div class="stars">★★★★★</div><p>The vehicle looked amazing for our event.</p><strong>— Event Client</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <details><summary>What is the minimum booking?</summary><p>All services have a 2-hour minimum.</p></details>
+      <details><summary>How much is hourly service?</summary><p>Hourly chauffeur service is $150 per hour. Service fees are included.</p></details>
+      <details><summary>How do I pay?</summary><p>After confirming your reservation, we send a secure payment link. We accept Stripe, Apple Pay, PayPal, Cash App, and Zelle.</p></details>
+      <details><summary>Do you service airports?</summary><p>Yes. We service JFK, LGA, Newark, Teterboro, and private airports.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact First Class Chauffeur</h2>
+      <p class="lead">Call, email, or submit the booking form for a fast quote.</p>
+      <p><strong>Phone:</strong> <a class="gold" href="tel:6465138667">646-513-8667</a></p>
+      <p><strong>Email:</strong> <a class="gold" href="mailto:firstclasschauffeur23@gmail.com">firstclasschauffeur23@gmail.com</a></p>
+      <p><strong>Location:</strong> New York</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><strong>FIRST CLASS CHAUFFEUR</strong><p>Luxury chauffeur service based in New York.</p></div>
+    <div><strong>Pricing</strong><p>$150/hour<br>2-hour minimum<br>Service fees included</p></div>
+    <div><strong>Payments</strong><p>Stripe<br>Apple Pay<br>PayPal<br>Cash App<br>Zelle</p></div>
+  </div>
+</footer>
+
+<a class="fixed" href="tel:6465138667">Call Now</a>
+
+<script>
+function calcTotal() {
+  var hours = parseInt(document.getElementById('hours').value || '2', 10);
+  if (hours < 2) hours = 2;
+  document.getElementById('total').innerText = '$' + (hours * 150);
+}
+calcTotal();
+</script>
 </body>
 </html>
