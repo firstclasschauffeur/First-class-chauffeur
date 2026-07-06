@@ -82,7 +82,7 @@
   <nav>
     <a class="logo" href="#home">FIRST CLASS <span>CHAUFFEUR</span></a>
     <div class="navlinks">
-      <a href="#pricing">Pricing</a><a href="#fleet">Fleet</a><a href="#booking">Book</a><a href="#pay">Pay</a><a href="#contact">Contact</a>
+      <a href="#pricing">Pricing</a><a href="#fleet">Fleet</a><a href="#booking">Book</a><a href="#pay">Pay</a><a href="#policy">Policy</a><a href="#contact">Contact</a>
     </div>
     <a class="call" href="tel:6465138667">Call 646-513-8667</a>
   </nav>
@@ -221,6 +221,11 @@
           <input name="passengers" placeholder="Number of Passengers">
           <input name="flight_info" placeholder="Flight Info, if airport pickup">
           <textarea name="special_requests" placeholder="Special Requests / Notes"></textarea>
+
+          <label style="font-size:14px;color:#ddd;display:flex;gap:10px;align-items:flex-start">
+            <input type="checkbox" name="no_refund_policy_agreed" required style="width:auto;margin-top:5px">
+            I understand and agree that all payments are final and non-refundable.
+          </label>
           <button type="submit">Send Booking Request</button>
         </form>
       </div>
@@ -264,6 +269,20 @@
     </div>
   </section>
 
+
+  <section id="policy" class="section-dark">
+    <div class="wrap">
+      <h2>No Refund Policy</h2>
+      <div class="card">
+        <p><strong>All payments are final and non-refundable.</strong></p>
+        <p>Once a reservation is booked and payment is submitted, the payment secures the vehicle, chauffeur, and scheduled service time. Cancellations, no-shows, late arrivals, or customer changes do not qualify for a refund.</p>
+        <p>Rescheduling may be considered based on availability, but it is not guaranteed. Additional charges may apply for route changes, extra time, waiting time, tolls, parking, or special requests.</p>
+        <p class="small">By submitting a booking request or making a payment, the customer agrees to this no refund policy.</p>
+      </div>
+    </div>
+  </section>
+
+
   <section id="contact">
     <div class="wrap">
       <h2>Contact First Class Chauffeur</h2>
@@ -279,7 +298,7 @@
   <div class="footer-grid">
     <div><strong>FIRST CLASS CHAUFFEUR</strong><p>Luxury chauffeur service based in New York.</p></div>
     <div><strong>Pricing</strong><p>$150/hour<br>2-hour minimum<br>Service fees included</p></div>
-    <div><strong>Payments</strong><p>Stripe<br>Apple Pay<br>PayPal<br>Cash App<br>Zelle</p></div>
+    <div><strong>Policy</strong><p>No refunds<br>Payments are final<br>Rescheduling based on availability</p></div>
   </div>
 </footer>
 
